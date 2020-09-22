@@ -30,6 +30,8 @@ public class SnakeLadder {
      case LADDER:
     	 playerPosition =+ number_on_Die;
     	 System.out.println("Position of player is :"+ playerPosition);
+    	 if(playerPosition > 100)
+    		 playerPosition = playerPosition - number_on_Die;
     	 break;
     	 default:
     		 playerPosition = playerPosition - number_on_Die;
