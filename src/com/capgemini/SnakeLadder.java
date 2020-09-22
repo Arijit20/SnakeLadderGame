@@ -12,15 +12,17 @@ public class SnakeLadder {
 	 int PLAYER_INITIAL_POSITION = 0;
 	 int playerPosition = 0;
 	 int playerCount = 1;
-     System.out.println("Starting Snake and Ladder Problem.");
-     System.out.println("No of players " + playerCount);
-     System.out.println("Initial position of player is " + PLAYER_INITIAL_POSITION);
+	 int dieCount = 0;
+   //  System.out.println("Starting Snake and Ladder Problem.");
+    // System.out.println("No of players " + playerCount);
+    // System.out.println("Initial position of player is " + PLAYER_INITIAL_POSITION);
      
      while(playerPosition < 100) {
+     dieCount += 1;
      Random r = new Random();
      int number_on_Die =  r.nextInt(6) + 1 ;
-  
-     System.out.println("Number got from rolling the die is "+ number_on_Die);
+     
+    // System.out.println("Number got from rolling the die is "+ number_on_Die);
      
      int option = (int)Math.floor(Math.random()*10) % 3;
      switch(option) {
@@ -41,7 +43,7 @@ public class SnakeLadder {
     	 
        }
      }
-
+  System.out.println("The die was played "+ dieCount+" times.");
 	}
 
 }
